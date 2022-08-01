@@ -66,7 +66,7 @@ class QLearner:
         mac_out = th.stack(mac_out, dim=1)  # Concat over time
 
         # Pick the Q-Values for the actions taken by each agent
-        chosen_action_qvals = th.gather(mac_out[:, :-1], dim=3, index=actions).squeeze(3)  # Remove the last dim
+        chosen_action_qvals = th.gather(mac_out[:, :-1].clone(), dim=3, index=actions).squeeze(3)  # Remove the last dim
 
         # Calculate the Q-Values necessary for the target
         target_mac_out = []
