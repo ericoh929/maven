@@ -1,3 +1,5 @@
+### This is revised for the library dependency. The algorithms is same with original
+
 # MAVEN
 Code, poster and slides for MAVEN: Multi-Agent Variational Exploration, NeurIPS 2019.
 
